@@ -8,19 +8,37 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- -----------custom css------------ -->
+    <style type="text/css">
+      .button {
+        /*background-color: #04AA6D;*/
+        border: none;
+        color: black;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 4px 2px;
+        border-radius: 12px;
+      }
+    </style>
+    <!-- -----------custom css------------ -->
   </head>
 
   <body>
-
-    <% if user_signed_in? %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <!-- <a href="<%= destroy_user_session_path %>">Log Out</a> -->
-      <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <a href="<%= user_session_path %>">Sign IN</a>
-      <a href="<%= new_user_registration_path %>">Sign UP</a>
-    <% end %>
+    <div>
+      <% if user_signed_in? %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <!-- <a href="<%= destroy_user_session_path %>">Log Out</a> -->
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'button' %>
+      <% else %>
+        <a href="<%= user_session_path %>">Sign IN</a>
+        <a href="<%= new_user_registration_path %>">Sign UP</a>
+      <% end %>
+    </div>
 
     <%= yield %>
   </body>
