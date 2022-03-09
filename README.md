@@ -1,2 +1,2 @@
-# plotseek
+# Quik Start
 Rails Template
