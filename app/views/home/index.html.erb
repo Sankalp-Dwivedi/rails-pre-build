@@ -3,7 +3,24 @@
 	  background-image: url("<%= ActionController::Base.helpers.image_url("image1.jpg")%>");
 	  background-color: #cccccc;
 	}
+
+	#outer
+	{
+	    width:100%;
+	    text-align: center;
+	}
+	.inner
+	{
+	    display: inline-block;
+	}
 </style>
 <section>
-
+	<div id="outer">
+	  <div class="inner">
+	  	<a href="<%= new_post_path %>" class="button">Add Your Plot</a>
+	  </div>
+	  <div class="inner">
+	  	<a href="<%= posts_path %>" class="button">View</a>
+	  </div>
+	</div>
 </section>
