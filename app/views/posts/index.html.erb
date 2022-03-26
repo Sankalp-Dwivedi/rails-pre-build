@@ -2,6 +2,10 @@
 
 <h1>Posts</h1>
 
+<div class="post-listing container">
+  <%= render 'post', post: @posts[0] %>
+</div>
+  
 <table>
   <thead>
     <tr>
@@ -11,6 +15,7 @@
       <th>Address</th>
       <th>Location</th>
       <th>Area type</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +29,9 @@
         <td><%= post.address %></td>
         <td><%= post.location %></td>
         <td><%= post.area_type %></td>
+        <% if post.try(:image).attached? %>
+          <td><%= image_tag url_for(post.try(:image)) %></td>
+        <% end %>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,3 +1,8 @@
+<style type="text/css">
+  .field {
+    margin: 30px;
+  }
+</style>
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -13,35 +18,45 @@
 
   <div class="field">
     <%= form.label :size %>
-    <%= form.text_field :size %>
+    <%= form.text_field :size, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :rate %>
-    <%= form.text_field :rate %>
+    <%= form.text_field :rate, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :total_price %>
-    <%= form.text_field :total_price %>
+    <%= form.text_field :total_price, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_area :address %>
+    <%= form.text_area :address, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :location %>
-    <%= form.text_area :location %>
+    <%= form.text_area :location, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :area_type %>
-    <%= form.text_field :area_type %>
+    <%= form.text_field :area_type, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="field">
+    <%= form.label :thumbanil_image %>
+    <%= form.file_field :thumbanil_image, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :images %>
+    <%= form.file_field :images, class: "form-control", multiple: "true" %>
+  </div>
+
+  <div class="actions text-center">
+    <%= form.submit "submit" , class: "btn btn-outline-danger px-5" %>
   </div>
 <% end %>

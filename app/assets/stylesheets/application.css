@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+
+/*==Post Partial==*/
+.card {
+    width: 100%;
+    min-height: 100px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 6px 12px rgb(0 0 0 / 10%);
+    position: relative;
+    overflow: hidden;
+}
+/*==Post Partial==*/
+
+/*==Layout==*/
+.button {
+        /*background-color: #04AA6D;*/
+        border: none;
+        color: black;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 4px 2px;
+        border-radius: 12px;
+      }
+/*==Layout==*/
