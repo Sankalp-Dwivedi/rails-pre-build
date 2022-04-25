@@ -110,7 +110,7 @@
     <hr>
     <div>
       <% if @post.try(:images).attached? %>
-        <%= image_tag url_for(@post.try(:images)) %>
+        <%#= image_tag url_for(@post.try(:images)) %>
       <% else %>
         <div class="center">
           <span class="no-image-span p-2">No More Images Attached</span>

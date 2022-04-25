@@ -29,8 +29,8 @@
         <td><%= post.address %></td>
         <td><%= post.location %></td>
         <td><%= post.area_type %></td>
-        <% if post.try(:image).attached? %>
-          <td><%= image_tag url_for(post.try(:image)) %></td>
+        <% if post.try(:thumbanil_image).attached? %>
+          <td><%= image_tag url_for(post.try(:thumbanil_image)) %></td>
         <% end %>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
