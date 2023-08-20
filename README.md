@@ -25,3 +25,5 @@ Things you may want to cover:
 
 # Quik Start
 Rails Template
+
+This Quick Start Rails template and a Rails CMS is currently in the early stage of development.
